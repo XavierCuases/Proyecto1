@@ -47,5 +47,5 @@ Before running the project, make sure you have the following installed:
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/Retrofiyer/PracticeEC2.git
-   cd PracticeEC2
+   git clone https://github.com/XavierCuases/Proyecto1.git
+  
