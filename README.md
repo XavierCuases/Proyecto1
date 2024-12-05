@@ -1,107 +1,52 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servidor Local en Node.js con Despliegue Automatizado</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 4px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 4px;
-            overflow-x: auto;
-        }
-        h1, h2 {
-            color: #333;
-        }
-    </style>
-</head>
-<body>
-    <h1>Servidor Local en Node.js con Despliegue Automatizado</h1>
+# Hello World on Javascript with EC2
 
-    <h2>Descripción</h2>
-    <p>
-        Este proyecto consiste en un servidor básico en Node.js que responde con contenido HTML. También incluye la configuración de un pipeline en GitHub Actions para pruebas automáticas y preparación para un despliegue continuo en AWS.
-    </p>
+![image](https://github.com/user-attachments/assets/901179c7-bfc6-480c-8d01-901364e5cc86)
 
-    <h2>Requisitos</h2>
-    <ul>
-        <li>Node.js (versión 16 o superior).</li>
-        <li>Cuenta en GitHub.</li>
-        <li>Configuración de AWS CLI (opcional para despliegue).</li>
-    </ul>
+## About The Project
 
-    <h2>Instalación y Uso</h2>
-    <ol>
-        <li>
-            <strong>Clona el repositorio:</strong>
-            <pre><code>git clone https://github.com/usuario/repositorio.git
-cd repositorio</code></pre>
-        </li>
-        <li>
-            <strong>Ejecuta el servidor local:</strong>
-            <p>Crea un archivo <code>server.js</code> con el siguiente contenido:</p>
-            <pre><code>const http = require('http');
+This project demonstrates the deployment of a simple Node.js application using Docker and CI/CD pipelines.
 
-const PORT = 3000;
+## Table of Contents
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end('<h1>¡Hola, mundo desde Node.js!</h1>');
-});
+1. [About The Project](#about-the-project)
+   - [Overview](#overview)
+   - [Features](#features)
+   - [Built With](#built-with)
+2. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+   - [Running the Project](#running-the-project)
+   - [Running with Docker](#running-with-docker)
+3. [Contributing](#contributing)
 
-server.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});</code></pre>
-            <p>Inicia el servidor con:</p>
-            <pre><code>node server.js</code></pre>
-        </li>
-        <li>
-            <strong>Verifica la ejecución:</strong>
-            <p>Abre un navegador web e ingresa a <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>.</p>
-        </li>
-    </ol>
+## Overview
 
-    <h2>Automatización con GitHub Actions</h2>
-    <ol>
-        <li>
-            Crea el archivo <code>.github/workflows/nodejs.yml</code> con el siguiente contenido:
-            <pre><code>name: Node.js CI/CD
+The Hello World CI/CD project combines the simplicity of a "Hello World" application with a robust DevOps pipeline. It uses Docker to containerize the application and GitHub Actions to automate the Continuous Integration (CI) and Continuous Deployment (CD) processes.
 
-on:
-  push:
-    branches:
-      - main
+## Features
 
-jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
+- **Automated CI/CD**: A complete pipeline built with GitHub Actions to automate the testing, building, and deployment of the application.
+- **EC2 Deployment**: The application is deployed to an EC2 instance for reliable cloud hosting.
+- **Fast and Lightweight**: A minimal Node.js app ensures quick startup and low resource usage.
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+## Built With
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
+[![Node.js][nodejs.com]][nodejs-url]
+[![Docker][docker.com]][docker-url]
 
-    - name: Install dependencies
-      run: npm install
+## Getting Started
 
-    - name: Run tests
-      run: echo "Añadir pruebas aquí en el futuro"</code></pre>
-        </li>
-        <li>
-            Realiza un
+### Prerequisites
+
+Before running the project, make sure you have the following installed:
+
+- **Node.js 18.20.4 or higher** - [Download Node](https://nodejs.org/en/download/package-manager)
+- **Docker (optional)** - [Install Docker](https://www.docker.com/get-started/)
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/Retrofiyer/PracticeEC2.git
+   cd PracticeEC2
