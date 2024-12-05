@@ -16,6 +16,7 @@ CMD ["node", "server.js"]
 FROM nginx:alpine as frontend
 
 COPY ./public /usr/share/nginx/html
+COPY public /usr/share/nginx/html/public
 
 EXPOSE 80
 
