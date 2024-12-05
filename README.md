@@ -1,6 +1,5 @@
 # Hello World on Javascript with EC2
 
-![image](https://github.com/user-attachments/assets/901179c7-bfc6-480c-8d01-901364e5cc86)
 
 ## About The Project
 
