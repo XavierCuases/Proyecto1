@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servidor Local en Node.js con Despliegue Automatizado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <h1>Servidor Local en Node.js con Despliegue Automatizado</h1>
@@ -36,7 +58,7 @@ const PORT = 3000;
 
 const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end('&lt;h1&gt;¡Hola, mundo desde Node.js!&lt;/h1&gt;');
+    res.end('<h1>¡Hola, mundo desde Node.js!</h1>');
 });
 
 server.listen(PORT, () => {
@@ -82,11 +104,4 @@ jobs:
       run: echo "Añadir pruebas aquí en el futuro"</code></pre>
         </li>
         <li>
-            Realiza un <strong>push</strong> al repositorio para activar el pipeline.
-        </li>
-    </ol>
-
-    <h2>Licencia</h2>
-    <p>Este proyecto está bajo la licencia MIT.</p>
-</body>
-</html>
+            Realiza un
